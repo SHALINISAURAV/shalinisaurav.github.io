@@ -94,3 +94,21 @@ text-decoration:none;
 border-radius:8px;
 font-weight:bold;
 }
+
+.project{
+background:#111827;
+padding:25px;
+border-radius:15px;
+margin-bottom:30px;
+box-shadow:0 0 20px rgba(0,229,255,0.15);
+}
+
+.project:hover{
+transform:translateY(-5px);
+transition:0.3s;
+box-shadow:0 0 30px rgba(0,229,255,0.4);
+}
+
+.gallery img{
+border:1px solid #1f2937;
+}

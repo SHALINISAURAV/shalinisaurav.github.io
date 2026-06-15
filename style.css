@@ -1,596 +1,486 @@
-/* ==========================================================================
-   ADVANCED CYBERPUNK SUBSYSTEM DESIGNER SPEC
-   ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@500;600;700&display=swap');
-
-:root {
-    --bg-absolute: #020105;
-    --bg-card-glass: rgba(6, 4, 14, 0.85);
-    --neon-cyan: #00f3ff;
-    --neon-purple: #b600ff;
-    --neon-magenta: #ff0055;
-    --text-neon: #e2dbff;
-    --text-dark-muted: #5e597c;
-    
-    --font-cyber-head: 'Orbitron', sans-serif;
-    --font-cyber-mono: 'Share Tech Mono', monospace;
-    --font-cyber-body: 'Rajdhani', sans-serif;
-    
-    --glow-heavy-cyan: 0 0 15px rgba(0, 243, 255, 0.6), 0 0 30px rgba(0, 243, 255, 0.2);
-    --glow-heavy-purple: 0 0 15px rgba(182, 0, 255, 0.6), 0 0 30px rgba(182, 0, 255, 0.2);
-    --glow-heavy-magenta: 0 0 15px rgba(255, 0, 85, 0.6), 0 0 30px rgba(255, 0, 85, 0.2);
-}
-
-/* ==========================================================================
-   MAINFRAME SCI-FI OVERLAYS
-   ========================================================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: var(--bg-absolute);
-    color: var(--text-neon);
-    font-family: var(--font-cyber-body);
-    font-size: 1.15rem;
-    letter-spacing: 0.5px;
-    overflow-x: hidden;
-    position: relative;
-}
-
-/* CRT System Monitor Scanline Overlay Effect */
-.crt-scanlines {
-    position: fixed;
-    top: 0; left: 0; width: 100vw; height: 100vh;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
-    background-size: 100% 4px, 6px 100%;
-    z-index: 9999;
-    pointer-events: none;
-}
-
-/* High-Tech Grid Grounding Matrix */
-.cyber-grid {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-image: 
-        linear-gradient(rgba(0, 243, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 243, 255, 0.02) 1px, transparent 1px);
-    background-size: 40px 40px;
-    z-index: -2;
-    pointer-events: none;
-}
-
-/* Drifting Dynamic Energy Background Nodes */
-.ambient-glow-1, .ambient-glow-2 {
-    position: fixed;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    filter: blur(140px);
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0.12;
-}
-.ambient-glow-1 {
-    background: var(--neon-purple);
-    top: -10%; left: -10%;
-    animation: drift 25s infinite alternate ease-in-out;
-}
-.ambient-glow-2 {
-    background: var(--neon-cyan);
-    bottom: 10%; right: -5%;
-    animation: drift 30s infinite alternate-reverse ease-in-out;
-}
-
-@keyframes drift {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(80px, 50px) scale(1.2); }
-}
-
-/* ==========================================================================
-   HUD HEADER NAVIGATION
-   ========================================================================== */
-.hud-nav {
-    position: sticky;
-    top: 0;
-    background: rgba(4, 2, 8, 0.9);
-    border-bottom: 2px solid rgba(0, 243, 255, 0.3);
-    box-shadow: 0 5px 20px rgba(0, 243, 255, 0.1);
-    backdrop-filter: blur(10px);
-    z-index: 5000;
+/* =========================
+   GOOGLE FONT
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#050816;
+color:white;
+line-height:1.8;
+overflow-x:hidden;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:80px 20px;
+
+background:
+radial-gradient(circle at top left,#00e5ff20,transparent 40%),
+radial-gradient(circle at bottom right,#8a2be220,transparent 40%),
+#050816;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-size:70px;
+font-weight:900;
+margin-bottom:20px;
+
+background:linear-gradient(
+90deg,
+#00e5ff,
+#8a2be2
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.tagline{
+font-size:28px;
+font-weight:700;
+margin-bottom:20px;
+color:#d6d6d6;
+}
+
+.subtitle{
+font-size:18px;
+max-width:800px;
+margin:auto;
+color:#b7b7b7;
+line-height:1.8;
+}
+
+.hero-buttons{
+margin-top:40px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.hero-buttons a{
+text-decoration:none;
+padding:14px 24px;
+border-radius:12px;
+font-weight:700;
+
+background:linear-gradient(
+135deg,
+#00e5ff,
+#8a2be2
+);
+
+color:white;
+
+transition:.3s;
+}
+
+.hero-buttons a:hover{
+transform:translateY(-5px);
+box-shadow:0 0 30px rgba(0,229,255,.4);
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+max-width:1300px;
+margin:auto;
+padding:80px 25px;
+}
+
+h2{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+font-weight:800;
+
+background:linear-gradient(
+90deg,
+#00e5ff,
+#8a2be2
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.stat-card{
+background:rgba(255,255,255,0.05);
+
+backdrop-filter:blur(10px);
+
+border:1px solid rgba(255,255,255,.08);
+
+padding:35px;
+border-radius:20px;
+
+text-align:center;
+transition:.3s;
 }
 
-.hud-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 15px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.hud-decoder {
-    font-family: var(--font-cyber-mono);
-    color: var(--neon-cyan);
-    text-shadow: 0 0 8px var(--neon-cyan);
-    font-size: 0.9rem;
-}
-
-.hud-links a {
-    color: var(--text-neon);
-    text-decoration: none;
-    font-family: var(--font-cyber-mono);
-    font-weight: bold;
-    font-size: 0.9rem;
-    margin-left: 25px;
-    transition: all 0.3s;
-    letter-spacing: 1px;
-}
-
-.hud-links a:hover {
-    color: var(--neon-magenta);
-    text-shadow: var(--glow-heavy-magenta);
-}
-
-.tech-num {
-    color: var(--neon-cyan);
-}
-
-/* ==========================================================================
-   HERO COMMAND DECK
-   ========================================================================== */
-.hero {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 20px;
-}
-
-.hero-mainframe {
-    width: 100%;
-    max-width: 950px;
-    background: var(--bg-card-glass);
-    border: 1px solid rgba(182, 0, 255, 0.4);
-    box-shadow: 0 0 30px rgba(182, 0, 255, 0.1);
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.terminal-header {
-    background: #0d0a1c;
-    padding: 10px 15px;
-    border-bottom: 1px solid rgba(182, 0, 255, 0.3);
-    display: flex;
-    align-items: center;
-}
-
-.terminal-header .dot {
-    width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; display: inline-block;
-}
-.dot.red { background: var(--neon-magenta); }
-.dot.yellow { background: #ffaa00; }
-.dot.green { background: #00ff66; }
-
-.terminal-title {
-    font-family: var(--font-cyber-mono);
-    font-size: 0.8rem;
-    color: var(--text-dark-muted);
-    margin-left: 10px;
-}
-
-.hero-body {
-    padding: 50px 40px;
-    text-align: center;
-}
-
-/* HARDCORE RECURSIVE TEXT GLITCH MACHINE */
-.glitch-text {
-    font-family: var(--font-cyber-head);
-    font-size: 5rem;
-    font-weight: 900;
-    letter-spacing: -2px;
-    position: relative;
-    color: white;
-    text-shadow: 0 0 10px rgba(255,255,255,0.5);
-    margin-bottom: 10px;
-}
-
-.glitch-text::before, .glitch-text::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: var(--bg-card-glass);
-}
-
-.glitch-text::before {
-    left: 2px;
-    text-shadow: -2px 0 var(--neon-cyan);
-    clip: rect(44px, 450px, 56px, 0);
-    animation: glitch-anim 5s infinite linear alternate-reverse;
-}
-
-.glitch-text::after {
-    left: -2px;
-    text-shadow: -2px 0 var(--neon-magenta), 0 0 10px var(--neon-magenta);
-    clip: rect(85px, 450px, 140px, 0);
-    animation: glitch-anim 3s infinite linear alternate-reverse;
-}
-
-@keyframes glitch-anim {
-    0% { clip: rect(15px, 9999px, 66px, 0); }
-    10% { clip: rect(85px, 9999px, 5px, 0); }
-    20% { clip: rect(34px, 9999px, 115px, 0); }
-    30% { clip: rect(120px, 9999px, 45px, 0); }
-    40% { clip: rect(5px, 9999px, 88px, 0); }
-    50% { clip: rect(60px, 9999px, 145px, 0); }
-    60% { clip: rect(10px, 9999px, 22px, 0); }
-    70% { clip: rect(90px, 9999px, 130px, 0); }
-    80% { clip: rect(40px, 9999px, 75px, 0); }
-    90% { clip: rect(112px, 9999px, 92px, 0); }
-    100% { clip: rect(18px, 9999px, 110px, 0); }
-}
-
-.tagline {
-    font-family: var(--font-cyber-mono);
-    font-size: 1.6rem;
-    color: var(--neon-cyan);
-    text-shadow: var(--glow-heavy-cyan);
-    margin-bottom: 30px;
-}
-
-.subtitle {
-    max-width: 780px;
-    margin: 0 auto 45px auto;
-    color: #a4a0c5;
-    font-size: 1.15rem;
-    line-height: 1.7;
-}
-
-/* AGGRESSIVE CLIP-PATH BUTTON SYSTEM */
-.cyber-buttons-group {
-    display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
-}
-
-.cyber-btn {
-    position: relative;
-    padding: 14px 32px;
-    font-family: var(--font-cyber-mono);
-    font-weight: bold;
-    font-size: 1rem;
-    letter-spacing: 1.5px;
-    text-decoration: none;
-    color: white;
-    background: transparent;
-    cursor: pointer;
-    clip-path: polygon(12px 0%, 100% 0%, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0% 100%, 0% 12px);
-    transition: all 0.3s;
+.stat-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px rgba(0,229,255,.2);
 }
-
-.primary-neon {
-    background: var(--neon-cyan);
-    color: var(--bg-absolute);
-    box-shadow: var(--glow-heavy-cyan);
-}
-.primary-neon:hover {
-    background: white;
-    box-shadow: 0 0 25px white;
-    transform: translateY(-2px);
+
+.stat-card h3{
+font-size:42px;
+color:#00e5ff;
+margin-bottom:10px;
 }
+
+/* =========================
+   ABOUT
+========================= */
 
-.secondary-neon {
-    border: 1px solid var(--neon-purple);
-    background: rgba(182, 0, 255, 0.08);
+section p{
+max-width:950px;
+margin:auto;
+text-align:center;
+font-size:18px;
+color:#d0d0d0;
 }
-.secondary-neon:hover {
-    background: rgba(182, 0, 255, 0.25);
-    border-color: var(--neon-cyan);
-    box-shadow: var(--glow-heavy-cyan);
-    transform: translateY(-2px);
-}
 
-/* ==========================================================================
-   TELEMETRY REAL-TIME METRICS
-   ========================================================================== */
-.telemetry-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin-bottom: 40px;
+/* =========================
+   WHAT I BUILD
+========================= */
+
+.build-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
-
-.telemetry-card {
-    background: rgba(12, 8, 24, 0.8);
-    border: 1px solid rgba(0, 243, 255, 0.15);
-    padding: 25px;
-    position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+
+.build-card{
+background:#0f172a;
+padding:30px;
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.06);
+
+transition:.3s;
 }
 
-.card-accent {
-    position: absolute; top: 0; left: 0; width: 25px; height: 3px; background: var(--neon-cyan);
+.build-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 30px rgba(0,229,255,.2);
 }
 
-.telemetry-label {
-    font-family: var(--font-cyber-mono);
-    color: var(--text-dark-muted);
-    font-size: 0.85rem;
-    display: block;
+.build-card h3{
+margin-bottom:15px;
 }
 
-.telemetry-value {
-    font-family: var(--font-cyber-head);
-    font-size: 2.3rem;
-    font-weight: bold;
-    color: var(--text-neon);
-    margin-top: 5px;
+.build-card p{
+text-align:left;
 }
-.telemetry-value .unit {
-    font-family: var(--font-cyber-mono);
-    font-size: 0.8rem;
-    color: var(--neon-magenta);
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
 }
+
+.skills span{
+padding:12px 18px;
+
+background:#0f172a;
+
+border-radius:30px;
+
+border:1px solid rgba(0,229,255,.15);
 
-/* ==========================================================================
-   CYBER DISPLAY HIERARCHY (SECTIONS & PANELS)
-   ========================================================================== */
-.cyber-section {
-    padding: 55px 0;
+font-size:14px;
+
+transition:.3s;
 }
 
-.cyber-heading {
-    font-family: var(--font-cyber-head);
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 35px;
-    color: white;
-    letter-spacing: 1px;
+.skills span:hover{
+background:#00e5ff;
+color:black;
+transform:translateY(-3px);
 }
-.heading-bracket {
-    color: var(--neon-cyan);
-    text-shadow: var(--glow-heavy-cyan);
+
+/* =========================
+   PROJECT CARDS
+========================= */
+
+.project{
+background:#0f172a;
+
+border-radius:25px;
+
+padding:35px;
+
+margin-bottom:40px;
+
+border:1px solid rgba(255,255,255,.06);
+
+transition:.3s;
 }
 
-/* CYBER TECH PANEL FRAME */
-.cyber-panel {
-    background: var(--bg-card-glass);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 35px;
-    position: relative;
-    backdrop-filter: blur(8px);
+.project:hover{
+transform:translateY(-8px);
+box-shadow:0 0 30px rgba(0,229,255,.15);
 }
 
-.bio-panel {
-    border-left: 3px solid var(--neon-purple);
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+.project h3{
+font-size:28px;
+margin-bottom:20px;
 }
+
+/* =========================
+   SCREENSHOT SLIDER
+========================= */
+
+.gallery{
+display:flex;
+gap:20px;
+
+overflow-x:auto;
+
+padding:15px 0;
 
-.bio-panel p {
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-    color: #cbd5e1;
-    line-height: 1.8;
+scroll-behavior:smooth;
 }
 
-/* Structural Detail Overlay Hooks */
-.corner-spec {
-    position: absolute; width: 10px; height: 10px; border-color: var(--neon-cyan); border-style: solid; width: 12px; height: 12px;
+.gallery::-webkit-scrollbar{
+height:8px;
 }
-.corner-spec.top-left { top: -2px; left: -2px; border-width: 2px 0 0 2px; }
-.corner-spec.bottom-right { bottom: -2px; right: -2px; border-width: 0 2px 2px 0; border-color: var(--neon-magenta); }
 
-/* ==========================================================================
-   MODULES (CAPABILITIES GRID)
-   ========================================================================== */
-.capability-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.gallery::-webkit-scrollbar-thumb{
+background:#00e5ff;
+border-radius:20px;
 }
 
-.capability-card {
-    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 0 100%);
-    transition: all 0.3s ease;
+.gallery img{
+
+min-width:850px;
+max-width:950px;
+
+height:auto;
+
+border-radius:16px;
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.3s;
 }
 
-.capability-card h3 {
-    font-family: var(--font-cyber-head);
-    font-size: 1.15rem;
-    margin-bottom: 12px;
-    letter-spacing: 0.5px;
+.gallery img:hover{
+transform:scale(1.02);
 }
 
-.capability-card p {
-    color: #94a3b8;
-    font-size: 1rem;
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons{
+margin-top:20px;
 }
+
+.buttons a{
+display:inline-block;
 
-/* Targeted Glow Triggers */
-.cyan-glow:hover { border-color: var(--neon-cyan); box-shadow: var(--glow-heavy-cyan); transform: translateY(-4px); }
-.purple-glow:hover { border-color: var(--neon-purple); box-shadow: var(--glow-heavy-purple); transform: translateY(-4px); }
-.magenta-glow:hover { border-color: var(--neon-magenta); box-shadow: var(--glow-heavy-magenta); transform: translateY(-4px); }
+text-decoration:none;
 
-/* ==========================================================================
-   THE MATRIX KNOWLEDGE TAG CORNER
-   ========================================================================== */
-.matrix-wrapper {
-    display: flex; flex-wrap: wrap; gap: 10px;
+padding:12px 20px;
+
+margin-right:10px;
+margin-top:10px;
+
+border-radius:12px;
+
+font-weight:700;
+
+background:linear-gradient(
+135deg,
+#00e5ff,
+#8a2be2
+);
+
+color:white;
+
+transition:.3s;
 }
 
-.matrix-tag {
-    font-family: var(--font-cyber-mono);
-    background: rgba(16, 12, 32, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 10px 20px;
-    font-size: 0.95rem;
-    color: #94a3b8;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%);
-    transition: all 0.2s;
+.buttons a:hover{
+transform:translateY(-4px);
+box-shadow:0 0 25px rgba(0,229,255,.3);
 }
 
-.matrix-tag:hover {
-    background: white; color: var(--bg-absolute); font-weight: bold; transform: scale(1.05); box-shadow: 0 0 15px white;
+/* =========================
+   CONTACT
+========================= */
+
+section:last-of-type p{
+margin-bottom:15px;
 }
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+text-align:center;
 
-.matrix-tag.special { border-color: rgba(255, 0, 85, 0.4); color: #ffa3c4; }
-.matrix-tag.neon-c { border-color: rgba(0, 243, 255, 0.4); color: #a3f7ff; }
-.matrix-tag.neon-p { border-color: rgba(182, 0, 255, 0.4); color: #e9a3ff; }
+padding:60px 20px;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+color:#a8a8a8;
+}
 
-/* ==========================================================================
-   PROJECT CORES (DEPLOYMENTS)
-   ========================================================================== */
-.project-mainframe {
-    border: 1px solid rgba(0, 243, 255, 0.2);
-    margin-bottom: 30px;
-    border-radius: 2px;
+footer p{
+margin-bottom:10px;
 }
 
-.featured-frame {
-    border-left: 4px solid var(--neon-magenta);
-    background: linear-gradient(160deg, rgba(255, 0, 85, 0.03) 0%, rgba(6, 4, 14, 0.95) 60%);
+/* =========================
+   ANIMATIONS
+========================= */
+
+.project,
+.build-card,
+.stat-card{
+animation:fadeUp .8s ease;
 }
 
-.pulse-tag {
-    font-family: var(--font-cyber-mono);
-    background: var(--neon-magenta);
-    color: white;
-    font-size: 0.75rem;
-    font-weight: bold;
-    padding: 4px 12px;
-    display: inline-block;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-    animation: pulse-glow 2s infinite ease-in-out;
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(30px);
 }
 
-@keyframes pulse-glow {
-    0%, 100% { opacity: 0.8; box-shadow: 0 0 5px var(--neon-magenta); }
-    50% { opacity: 1; box-shadow: 0 0 15px var(--neon-magenta); }
+to{
+opacity:1;
+transform:translateY(0);
 }
 
-.proj-title {
-    font-family: var(--font-cyber-head);
-    font-size: 1.6rem;
-    margin-bottom: 15px;
 }
+
+/* =========================
+   MOBILE
+========================= */
 
-/* Horizontal Gallery Deck */
-.cyber-gallery {
-    display: flex; gap: 15px; overflow-x: auto; padding-bottom: 12px; margin: 20px 0;
+@media(max-width:992px){
+
+.hero h1{
+font-size:52px;
 }
-.cyber-gallery::-webkit-scrollbar { height: 4px; }
-.cyber-gallery::-webkit-scrollbar-thumb { background: var(--neon-cyan); }
 
-.cyber-gallery img {
-    height: 200px; object-fit: cover; border: 1px solid rgba(255, 255, 255, 0.1); filter: grayscale(20%); transition: all 0.3s;
+.tagline{
+font-size:22px;
 }
-.cyber-gallery img:hover { filter: grayscale(0%); transform: scale(1.02); border-color: var(--neon-cyan); }
 
-.cyber-gallery.minimal img { height: 130px; width: 100%; }
+.gallery img{
+min-width:650px;
+}
 
-.proj-desc {
-    color: #94a3b8; line-height: 1.7; margin-bottom: 25px;
 }
+
+@media(max-width:768px){
 
-.proj-actions {
-    display: flex; gap: 20px;
+.hero{
+padding:60px 20px;
 }
-.action-link {
-    font-family: var(--font-cyber-mono);
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-    transition: all 0.3s;
+
+.hero h1{
+font-size:42px;
 }
-.action-link:hover { text-shadow: 0 0 8px currentColor; text-decoration: underline; }
-.text-cyan { color: var(--neon-cyan); }
-.text-magenta { color: var(--neon-magenta); }
-.text-purple { color: #d580ff; }
 
-/* Nested Infrastructure Grid Config */
-.sub-projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+.tagline{
+font-size:18px;
 }
-.sub-projects-grid .project-mainframe {
-    margin-bottom: 0;
-    display: flex; flex-direction: column; justify-content: space-between;
+
+.subtitle{
+font-size:16px;
 }
 
-/* ==========================================================================
-   NEON OPERATION TIMELINE
-   ========================================================================== */
-.neon-timeline {
-    border-left: 2px dashed rgba(182, 0, 255, 0.4);
-    padding-left: 25px;
-    margin-left: 10px;
+h2{
+font-size:32px;
 }
 
-.tl-node {
-    position: relative; margin-bottom: 40px;
+.gallery img{
+min-width:90vw;
 }
-.tl-node::before {
-    content: ''; position: absolute; left: -32px; top: 6px; width: 12px; height: 12px; background: var(--bg-absolute); border: 2px solid var(--neon-cyan); border-radius: 50%; box-shadow: var(--glow-heavy-cyan);
+
+.project{
+padding:25px;
 }
 
-.tl-status {
-    font-family: var(--font-cyber-mono); font-size: 0.8rem; color: var(--neon-magenta); margin-bottom: 4px; font-weight: bold;
+.hero-buttons{
+flex-direction:column;
+align-items:center;
 }
-.tl-content h3 { font-family: var(--font-cyber-head); font-size: 1.3rem; }
-.tl-content p { color: #94a3b8; margin-top: 5px; }
 
-/* ==========================================================================
-   COMMUNICATIONS BOX
-   ========================================================================== */
-.terminal-comm-box {
-    background: #080512;
-    border: 1px solid var(--neon-cyan);
-    box-shadow: var(--glow-heavy-cyan);
-    padding: 40px;
-    text-align: center;
+.hero-buttons a{
+width:250px;
 }
 
-.comm-banner {
-    font-family: var(--font-cyber-head); font-weight: 900; color: white; font-size: 1.4rem; margin-bottom: 15px;
 }
-.comm-alert { font-family: var(--font-cyber-mono); color: #94a3b8; margin-bottom: 25px; }
 
-.comm-grid {
-    display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;
+@media(max-width:480px){
+
+.hero h1{
+font-size:34px;
 }
-.comm-node {
-    font-family: var(--font-cyber-mono); text-decoration: none; color: white; padding: 12px 24px; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(0,0,0,0.4); transition: all 0.3s;
+
+.tagline{
+font-size:16px;
 }
-.comm-node:hover {
-    border-color: var(--neon-magenta); color: var(--neon-magenta); box-shadow: var(--glow-heavy-magenta);
+
+.subtitle{
+font-size:15px;
 }
 
-/* ==========================================================================
-   MAINFRAME SYSTEM FOOTER
-   ========================================================================== */
-.cyber-footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 40px 20px;
-    margin-top: 50px;
-    font-family: var(--font-cyber-mono);
-    color: var(--text-dark-muted);
-    font-size: 0.9rem;
+.stat-card h3{
+font-size:34px;
 }
-.footer-grid {
-    max-width: 1300px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px;
+
+h2{
+font-size:28px;
 }
-.crypto-text { color: rgba(182, 0, 255, 0.3); }
 
-/* Responsive adjustments */
-@media(max-width: 768px) {
-    .glitch-text { font-size: 3rem; }
-    .hud-links { display: none; }
-    .hero-body { padding: 30px 15px; }
 }

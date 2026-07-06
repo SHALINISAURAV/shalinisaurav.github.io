@@ -1,2 +1,2 @@
 # shalinisaurav.github.io
-Aspiring AI Engineer specializing in Machine Learning, Data Science, and Generative AI. Passionate about building scalable, real-world AI applications using Python, ML frameworks, and modern AI tools.
+AI Engineer building end-to-end intelligent systems in Generative AI, Machine Learning, and Data Science. Passionate about designing scalable AI products including RAG systems, multi-agent workflows, and multimodal applications using Python and LLMs.

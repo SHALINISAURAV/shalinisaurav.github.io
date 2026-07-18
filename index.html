@@ -1,920 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description"
-content="Portfolio of Shalini Saurav | Aspiring AI Engineer specializing in Machine Learning, Deep Learning, NLP, Generative AI, RAG Systems, AI Agents and Multimodal AI.">
-
-<meta name="keywords"
-content="AI Engineer, Machine Learning, Deep Learning, NLP, Generative AI, RAG, LangChain, Python, Portfolio">
-
-<meta name="author" content="Shalini Saurav">
-
-<title>Shalini Saurav | AI Portfolio</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Shalini Saurav | Aspiring AI Engineer specializing in Machine Learning, Deep Learning, NLP, Generative AI, RAG Systems, AI Agents and Multimodal AI.">
+    <meta name="keywords" content="AI Engineer, Machine Learning, Deep Learning, NLP, Generative AI, RAG, LangChain, Python, Portfolio">
+    <meta name="author" content="Shalini Saurav">
+    <title>Shalini Saurav | AI Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<div id="lightbox">
-
-<img id="lightbox-img">
-
-</div>
-
-<script>
-
-const images=document.querySelectorAll(".gallery img");
-
-const lightbox=document.getElementById("lightbox");
-
-const img=document.getElementById("lightbox-img");
-
-images.forEach(image=>{
-
-image.onclick=()=>{
-
-lightbox.style.display="flex";
-
-img.src=image.src;
-
-}
-
-})
-
-lightbox.onclick=()=>{
-
-lightbox.style.display="none";
-
-}
-
-</script>
-  
 <body>
 
-<!-- ===========================
-NAVBAR
-=========================== -->
-
-<nav class="navbar">
-
-<div class="logo">
-SHALINI SAURAV
-</div>
-
-<ul>
-
-<li><a href="#about">About</a></li>
-
-<li><a href="#skills">Skills</a></li>
-
-<li><a href="#projects">Projects</a></li>
-
-<li><a href="#experience">Experience</a></li>
-
-<li><a href="#certifications">Certificates</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
-<!-- ===========================
-HERO
-=========================== -->
-
-<header class="hero">
-
-<div class="hero-content">
-
-<h1>SHALINI SAURAV</h1>
-
-<p class="tagline">
-
-Aspiring AI Engineer • Machine Learning • Generative AI
-
-</p>
-
-<p class="subtitle">
-
-Building intelligent AI applications using Machine Learning,
-Deep Learning, Natural Language Processing,
-Large Language Models (LLMs),
-Retrieval-Augmented Generation (RAG),
-AI Agents and Multimodal AI.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="Shalini_Resume-.pdf" target="_blank">
-📄 Resume
-</a>
-
-<a href="https://github.com/SHALINISAURAV" target="_blank">
-💻 GitHub
-</a>
-
-<a href="https://www.linkedin.com/in/shalini-saurav-649aa22b8/" target="_blank">
-🔗 LinkedIn
-</a>
-
-</div>
-
-</div>
-
-</header>
-
-<!-- ===========================
-STATS
-=========================== -->
-
-<section class="stats">
-
-<div class="stat-card">
-
-<h3>10+</h3>
-
-<p>AI Projects</p>
-
-</div>
-
-<div class="stat-card">
-
-<h3>8+</h3>
-
-<p>Live Deployments</p>
-
-</div>
-
-<div class="stat-card">
-
-<h3>10+</h3>
-
-<p>Certifications</p>
-
-</div>
-
-<div class="stat-card">
-
-<h3>7+</h3>
-
-<p>AI Domains</p>
-
-</div>
-
-</section>
-
-<!-- ===========================
-ABOUT
-=========================== -->
-
-<section id="about">
-
-<h2>About Me</h2>
-
-<p>
-
-I am an aspiring AI Engineer currently pursuing a
-B.Tech in Computer Science & Engineering (Data Science)
-and entering my final year.
-
-My interests span Machine Learning,
-Deep Learning,
-Natural Language Processing,
-Generative AI,
-Retrieval-Augmented Generation (RAG),
-AI Agents,
-Agentic AI,
-and Multimodal AI Systems.
-
-I enjoy designing intelligent products,
-building production-ready AI applications,
-and continuously exploring emerging technologies
-to solve real-world problems through data-driven solutions.
-
-</p>
-
-</section>
-
-<!-- ===========================
-WHAT I BUILD
-=========================== -->
-
-<section>
-
-<h2>What I Build</h2>
-
-<div class="build-grid">
-
-<div class="build-card">
-
-<h3>🤖 Generative AI</h3>
-
-<p>
-
-LLM-powered applications, intelligent assistants,
-prompt engineering workflows,
-and AI automation solutions.
-
-</p>
-
-</div>
-
-<div class="build-card">
-
-<h3>📚 RAG Systems</h3>
-
-<p>
-
-Document-aware AI systems using embeddings,
-vector search,
-LangChain,
-and Retrieval-Augmented Generation.
-
-</p>
-
-</div>
-
-<div class="build-card">
-
-<h3>🧠 AI Agents</h3>
-
-<p>
-
-Autonomous AI workflows,
-tool-using agents,
-and next-generation Agentic AI systems.
-
-</p>
-
-</div>
-
-<div class="build-card">
-
-<h3>🎭 Multimodal AI</h3>
-
-<p>
-
-Applications capable of understanding
-text,
-images,
-and multimodal information simultaneously.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ===========================
-SKILLS
-=========================== -->
-
-<section id="skills">
-
-<h2>Technical Skills</h2>
-
-<div class="skills">
-
-<span>Python</span>
-
-<span>SQL</span>
-
-<span>HTML</span>
-
-<span>CSS</span>
-
-<span>JavaScript</span>
-
-<span>Machine Learning</span>
-
-<span>Deep Learning</span>
-
-<span>Scikit-Learn</span>
-
-<span>Pandas</span>
-
-<span>NumPy</span>
-
-<span>Matplotlib</span>
-
-<span>Natural Language Processing</span>
-
-<span>Transformers</span>
-
-<span>BERT</span>
-
-<span>Generative AI</span>
-
-<span>Large Language Models</span>
-
-<span>Prompt Engineering</span>
-
-<span>RAG</span>
-
-<span>LangChain</span>
-
-<span>AI Agents</span>
-
-<span>Agentic AI</span>
-
-<span>Hugging Face</span>
-
-<span>Streamlit</span>
-
-<span>SQLite</span>
-
-<span>MySQL</span>
-
-<span>Git</span>
-
-<span>GitHub</span>
-
-<span>Jupyter Notebook</span>
-
-<span>VS Code</span>
-
-<span>Google Colab</span>
-
-<span>AWS</span>
-
-</div>
-
-</section>
-
-<!-- ===========================
-FEATURED PROJECT
-=========================== -->
-
-<section id="projects">
-
-<h2>⭐ Featured Project</h2>
-
-<!-- ===========================
-FEATURED PROJECT
-=========================== -->
-
-<div class="project featured">
-
-<h3>🧠 Mental Health Mood Tracker AI</h3>
-
-<div class="gallery">
-
-<img src="assets/moodmind-1.png" alt="Mood Tracker Screenshot 1">
-<img src="assets/moodmind-2.png" alt="Mood Tracker Screenshot 2">
-<img src="assets/moodmind-3.png" alt="Mood Tracker Screenshot 3">
-<img src="assets/moodmind-4.png" alt="Mood Tracker Screenshot 4">
-<img src="assets/moodmind-5.png" alt="Mood Tracker Screenshot 5">
-
-</div>
-
-<p>
-
-AI-powered mental health journaling platform that detects
-user emotions, tracks mood history, analyzes emotional
-intensity, and provides personalized wellness recommendations
-using Machine Learning and NLP.
-
-</p>
-
-<div class="buttons">
-
-<a href="https://github.com/SHALINISAURAV/mental-health-mood-tracker-ai" target="_blank">
-GitHub
-</a>
-
-<a href="https://mental-health-mood-tracker-ai-ofkfmgzpl77w7g7jfg6toe.streamlit.app" target="_blank">
-Live Demo
-</a>
-
-</div>
-
-</div>
-
-<h2>Projects</h2>
-
-<!-- ===========================
-HYBRID RAG
-=========================== -->
-
-<div class="project">
-
-<h3>📖 Hybrid RAG</h3>
-
-<div class="gallery">
-
-<img src="assets/hybrid-rag-1.png" alt="">
-<img src="assets/hybrid-rag-2.png" alt="">
-
-</div>
-
-<p>
-
-Retrieval-Augmented Generation system combining embeddings,
-vector search, and Large Language Models to answer questions
-from custom documents with high accuracy.
-
-</p>
-
-<div class="buttons">
-
-<a href="https://github.com/SHALINISAURAV/Hybrid-Rag" target="_blank">
-GitHub
-</a>
-
-<a href="https://hybrid-rag-6yt2ayhckvkklc4s8wsgxw.streamlit.app" target="_blank">
-Live Demo
-</a>
-
-</div>
-
-</div>
-
-<!-- ===========================
-AI STUDY ASSISTANT
-=========================== -->
-
-<div class="project">
-
-<h3>📚 AI Study Assistant</h3>
-
-<div class="gallery">
-
-<img src="assets/study-assistant-1.png" alt="">
-<img src="assets/study-assistant-2.png" alt="">
-<img src="assets/study-assistant-3.png" alt="">
-
-</div>
-
-<p>
-
-AI-powered study assistant capable of summarizing PDFs,
-explaining concepts, answering questions, and making
-learning interactive using Large Language Models.
-
-</p>
-
-<div class="buttons">
-
-<a href="https://github.com/SHALINISAURAV/AI-Study-Assistant" target="_blank">
-GitHub
-</a>
-
-<a href="https://ai-study-assistant-fqe5mljcptjn7uvjzeeuap.streamlit.app" target="_blank">
-Live Demo
-</a>
-
-</div>
-
-</div>
-
-<!-- ===========================
-MULTIMODAL AGENT
-=========================== -->
-
-<div class="project">
-
-<h3>🎭 Multimodal Agent</h3>
-
-<div class="gallery">
-
-<img src="assets/multimodel-agent-1.png" alt="">
-
-</div>
-
-<p>
-
-Multimodal AI application capable of understanding both
-images and text while generating intelligent responses
-through advanced AI reasoning.
-
-</p>
-
-<div class="buttons">
-
-<a href="https://github.com/SHALINISAURAV/Multimodel_Agent" target="_blank">
-GitHub
-</a>
-
-<a href="https://multimodalagent-gxum3ml6xovzb5vdaeucr9.streamlit.app" target="_blank">
-Live Demo
-</a>
-
-</div>
-
-</div>
-
-<!-- ===========================
-RESUMEIQ AI
-=========================== -->
-
-<div class="project">
-
-<h3>📄 ResumeIQ AI</h3>
-
-<div class="gallery">
-
-<img src="assets/resumeiq-1.png" alt="">
-<img src="assets/resumeiq-2.png" alt="">
-<img src="assets/resumeiq-3.png" alt="">
-
-</div>
-
-<p>
-
-AI-powered Resume Analyzer that extracts resume insights,
-evaluates ATS compatibility, identifies skill gaps,
-and provides AI-powered job-match recommendations.
-
-</p>
-
-<div class="buttons">
-
-<a href="https://github.com/SHALINISAURAV/ResumeIQ-AI" target="_blank">
-GitHub
-</a>
-
-<a href="https://resumeiq-ai-nssmnqpuwft6tcrjsiz6py.streamlit.app" target="_blank">
-Live Demo
-</a>
-
-</div>
-
-</div>
-
-<!-- ===========================
-MULTI MODEL ML VISUALIZER
-=========================== -->
-
-<div class="project">
-
-<h3>📊 Multi-Model ML Visualizer</h3>
-
-<div class="gallery">
-
-<img src="assets/ml-visualizer-1.png" alt="">
-<img src="assets/ml-visualizer-2.png" alt="">
-<img src="assets/ml-visualizer-3.png" alt="">
-
-</div>
-
-<p>
-
-Interactive Machine Learning platform for uploading datasets,
-training multiple classification models,
-comparing performance metrics,
-and visualizing model evaluation results.
-
-</p>
-
-<div class="buttons">
-
-<a href="https://github.com/SHALINISAURAV/Multi_Model_ML_Visualizer" target="_blank">
-GitHub
-</a>
-
-<a href="https://multimodelmlvisualizer-3xbjtvfke7tal9jqkvuymu.streamlit.app" target="_blank">
-Live Demo
-</a>
-
-</div>
-
-</div>
-
-<!-- ===========================
-AI PROJECT BUILDER
-=========================== -->
-
-<div class="project">
-
-<h3>🚀 AI Project Builder</h3>
-
-<div class="gallery">
-
-<img src="assets/ai-project-builder-1.png" alt="">
-<img src="assets/ai-project-builder-2.png" alt="">
-<img src="assets/ai-project-builder-3.png" alt="">
-
-</div>
-
-<p>
-
-AI-powered application that generates complete AI project
-ideas, architecture diagrams, development roadmaps,
-and implementation strategies.
-
-</p>
-
-<div class="buttons">
-
-<a href="https://github.com/SHALINISAURAV/AI-Project-Builder" target="_blank">
-GitHub
-</a>
-
-<a href="https://ai-project-builder-9wgnsgdjpvq2gcwsvz7sr4.streamlit.app" target="_blank">
-Live Demo
-</a>
-
-</div>
-
-</div>
-
-<!-- ===========================
-MEDICAL INSURANCE REGRESSION
-=========================== -->
-
-<div class="project">
-
-<h3>🩺 Medical Insurance Regression</h3>
-
-<div class="gallery">
-
-<img src="assets/insurance-1.png" alt="">
-<img src="assets/insurance-2.png" alt="">
-
-</div>
-
-<p>
-
-End-to-end Machine Learning regression application
-for predicting medical insurance expenses using
-EDA, feature engineering,
-Scikit-Learn Pipelines,
-and Streamlit deployment.
-
-</p>
-
-<div class="buttons">
-
-<a href="https://github.com/SHALINISAURAV/medical-insurance-regression" target="_blank">
-GitHub
-</a>
-
-<a href="https://medical-insurance-regression-5hq3fvztnfcj79mehb5bc4.streamlit.app" target="_blank">
-Live Demo
-</a>
-
-</div>
-
-</div>
-
-<!-- ===========================
-STUDENT PERFORMANCE
-=========================== -->
-
-<div class="project">
-
-<h3>📊 Student Performance Predictor</h3>
-
-<div class="gallery">
-
-<img src="assets/student-performance-1.png" alt="">
-
-</div>
-
-<p>
-
-Machine Learning application that predicts
-student academic performance using demographic
-and educational features.
-
-</p>
-
-<div class="buttons">
-
-<a href="https://github.com/SHALINISAURAV/student-performance-predictor" target="_blank">
-GitHub
-</a>
-
-</div>
-
-</div>
-
-<!-- ===========================
-SENTIMENT ANALYSIS
-=========================== -->
-
-<div class="project">
-
-<h3>😊 Sentiment Analysis – Majhitar</h3>
-
-<div class="gallery">
-
-<img src="assets/sentiment-analysis-1.png" alt="">
-
-</div>
-
-<p>
-
-Restaurant review sentiment classification
-using TF-IDF, feature engineering,
-and Logistic Regression.
-
-</p>
-
-<div class="buttons">
-
-<a href="https://github.com/SHALINISAURAV/Sentiment-Analysis-Majhitar" target="_blank">
-GitHub
-</a>
-
-<a href="https://sentiment-analysis-majhitar-rt6lcycxzndimdes9rwqca.streamlit.app" target="_blank">
-Live Demo
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ===========================
-EXPERIENCE
-=========================== -->
-
-<section id="experience">
-
-<h2>Experience</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-
-<div class="timeline-content">
-
-<h3>💼 Data Science Intern</h3>
-
-<h4>National Institute of Technology (NIT) Patna</h4>
-
-<p>
-
-Worked on Machine Learning and Data Science workflows,
-including data preprocessing, exploratory data analysis,
-feature engineering, predictive modeling, model evaluation,
-and documentation of AI solutions.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="timeline-item">
-
-<div class="timeline-content">
-
-<h3>💼 Junior Data Scientist</h3>
-
-<h4>BCG X – Data Science Job Simulation (Forage)</h4>
-
-<p>
-
-Performed customer churn analysis,
-exploratory data analysis,
-machine learning modeling,
-business insight generation,
-and presented data-driven recommendations.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ===========================
-CERTIFICATIONS
-=========================== -->
-
-<section id="certifications">
-
-<h2>Certifications</h2>
-
-<div class="cert-grid">
-
-<div class="cert-card">
-OCI 2025 Generative AI Professional
-</div>
-
-<div class="cert-card">
-IIT Guwahati Data Science Program
-</div>
-
-<div class="cert-card">
-BCG X Data Science Job Simulation
-</div>
-
-<div class="cert-card">
-Machine Learning
-</div>
-
-<div class="cert-card">
-Deep Learning
-</div>
-
-<div class="cert-card">
-Natural Language Processing
-</div>
-
-<div class="cert-card">
-Generative AI
-</div>
-
-<div class="cert-card">
-Recommendation Systems
-</div>
-
-<div class="cert-card">
-Python for Data Science
-</div>
-
-<div class="cert-card">
-SQL for Data Analytics
-</div>
-
-</div>
-
-</section>
-
-<!-- ===========================
-CONTACT
-=========================== -->
-
-<section id="contact">
-
-<h2>Let's Connect</h2>
-
-<p class="contact-text">
-
-I'm actively looking for opportunities in
-Artificial Intelligence,
-Machine Learning,
-Generative AI,
-and Data Science.
-Feel free to reach out for internships,
-collaborations,
-or exciting AI projects.
-
-</p>
-
-<div class="contact-links">
-
-<a href="mailto:shalinisourav07@gmail.com">
-📧 Email
-</a>
-
-<a href="https://github.com/SHALINISAURAV" target="_blank">
-💻 GitHub
-</a>
-
-<a href="https://www.linkedin.com/in/shalini-saurav-649aa22b8/" target="_blank">
-🔗 LinkedIn
-</a>
-
-</div>
-
-</section>
-
-<!-- ===========================
-FOOTER
-=========================== -->
-
-<footer>
-
-<h3>Shalini Saurav</h3>
-
-<p>
-
-Aspiring AI Engineer • Machine Learning •
-Generative AI • NLP • RAG • AI Agents
-
-</p>
-
-<p>
-
-Designed & Developed with ❤️ using HTML, CSS & GitHub Pages
-
-</p>
-
-<p>
-
-© 2026 Shalini Saurav. All Rights Reserved.
-
-</p>
-
-</footer>
-
+    <!-- Lightbox Modal Box Structure -->
+    <div id="lightbox">
+        <img id="lightbox-img" alt="Enlarged Project Screenshot">
+    </div>
+
+    <!-- ===========================
+    NAVBAR
+    =========================== -->
+    <nav class="navbar">
+        <div class="logo">SHALINI SAURAV</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#certifications">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===========================
+    HERO
+    =========================== -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>SHALINI SAURAV</h1>
+            <p class="tagline">Aspiring AI Engineer • Machine Learning • Generative AI</p>
+            <p class="subtitle">
+                Building intelligent AI applications using Machine Learning, Deep Learning, Natural Language Processing, Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), AI Agents and Multimodal AI.
+            </p>
+            <div class="hero-buttons">
+                <a href="Shalini_Resume-.pdf" target="_blank">📄 Resume</a>
+                <a href="https://github.com/SHALINISAURAV" target="_blank">💻 GitHub</a>
+                <a href="https://www.linkedin.com/in/shalini-saurav-649aa22b8/" target="_blank">🔗 LinkedIn</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===========================
+    STATS
+    =========================== -->
+    <section class="stats">
+        <div class="stat-card">
+            <h3>10+</h3>
+            <p>AI Projects</p>
+        </div>
+        <div class="stat-card">
+            <h3>8+</h3>
+            <p>Live Deployments</p>
+        </div>
+        <div class="stat-card">
+            <h3>10+</h3>
+            <p>Certifications</p>
+        </div>
+        <div class="stat-card">
+            <h3>7+</h3>
+            <p>AI Domains</p>
+        </div>
+    </section>
+
+    <!-- ===========================
+    ABOUT
+    =========================== -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am an aspiring AI Engineer currently pursuing a B.Tech in Computer Science & Engineering (Data Science) and entering my final year. My interests span Machine Learning, Deep Learning, Natural Language Processing, Generative AI, Retrieval-Augmented Generation (RAG), AI Agents, Agentic AI, and Multimodal AI Systems. I enjoy designing intelligent products, building production-ready AI applications, and continuously exploring emerging technologies to solve real-world problems through data-driven solutions.
+        </p>
+    </section>
+
+    <!-- ===========================
+    WHAT I BUILD
+    =========================== -->
+    <section>
+        <h2>What I Build</h2>
+        <div class="build-grid">
+            <div class="build-card">
+                <h3>🤖 Generative AI</h3>
+                <p>LLM-powered applications, intelligent assistants, prompt engineering workflows, and AI automation solutions.</p>
+            </div>
+            <div class="build-card">
+                <h3>📚 RAG Systems</h3>
+                <p>Document-aware AI systems using embeddings, vector search, LangChain, and Retrieval-Augmented Generation.</p>
+            </div>
+            <div class="build-card">
+                <h3>🧠 AI Agents</h3>
+                <p>Autonomous AI workflows, tool-using agents, and next-generation Agentic AI systems.</p>
+            </div>
+            <div class="build-card">
+                <h3>🎭 Multimodal AI</h3>
+                <p>Applications capable of understanding text, images, and multimodal information simultaneously.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+    SKILLS
+    =========================== -->
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills">
+            <span>Python</span><span>SQL</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+            <span>Machine Learning</span><span>Deep Learning</span><span>Scikit-Learn</span><span>Pandas</span>
+            <span>NumPy</span><span>Matplotlib</span><span>Natural Language Processing</span><span>Transformers</span>
+            <span>BERT</span><span>Generative AI</span><span>Large Language Models</span><span>Prompt Engineering</span>
+            <span>RAG</span><span>LangChain</span><span>AI Agents</span><span>Agentic AI</span><span>Hugging Face</span>
+            <span>Streamlit</span><span>SQLite</span><span>MySQL</span><span>Git</span><span>GitHub</span>
+            <span>Jupyter Notebook</span><span>VS Code</span><span>Google Colab</span><span>AWS</span>
+        </div>
+    </section>
+
+    <!-- ===========================
+    PROJECTS
+    =========================== -->
+    <section id="projects">
+        <h2>⭐ Featured Project</h2>
+        <div class="project featured">
+            <h3>🧠 Mental Health Mood Tracker AI</h3>
+            <div class="gallery">
+                <img src="assets/moodmind-1.png" alt="Mood Tracker Screenshot 1">
+                <img src="assets/moodmind-2.png" alt="Mood Tracker Screenshot 2">
+                <img src="assets/moodmind-3.png" alt="Mood Tracker Screenshot 3">
+                <img src="assets/moodmind-4.png" alt="Mood Tracker Screenshot 4">
+                <img src="assets/moodmind-5.png" alt="Mood Tracker Screenshot 5">
+            </div>
+            <p>
+                AI-powered mental health journaling platform that detects user emotions, tracks mood history, analyzes emotional intensity, and provides personalized wellness recommendations using Machine Learning and NLP.
+            </p>
+            <div class="buttons">
+                <a href="https://github.com/SHALINISAURAV/mental-health-mood-tracker-ai" target="_blank">GitHub</a>
+                <a href="https://mental-health-mood-tracker-ai-ofkfmgzpl77w7g7jfg6toe.streamlit.app" target="_blank">Live Demo</a>
+            </div>
+        </div>
+
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>📖 Hybrid RAG</h3>
+            <div class="gallery">
+                <img src="assets/hybrid-rag-1.png" alt="Hybrid RAG Snapshot 1">
+                <img src="assets/hybrid-rag-2.png" alt="Hybrid RAG Snapshot 2">
+            </div>
+            <p>Retrieval-Augmented Generation system combining embeddings, vector search, and Large Language Models to answer questions from custom documents with high accuracy.</p>
+            <div class="buttons">
+                <a href="https://github.com/SHALINISAURAV/Hybrid-Rag" target="_blank">GitHub</a>
+                <a href="https://hybrid-rag-6yt2ayhckvkklc4s8wsgxw.streamlit.app" target="_blank">Live Demo</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>📚 AI Study Assistant</h3>
+            <div class="gallery">
+                <img src="assets/study-assistant-1.png" alt="Study Assistant 1">
+                <img src="assets/study-assistant-2.png" alt="Study Assistant 2">
+                <img src="assets/study-assistant-3.png" alt="Study Assistant 3">
+            </div>
+            <p>AI-powered study assistant capable of summarizing PDFs, explaining concepts, answering questions, and making learning interactive using Large Language Models.</p>
+            <div class="buttons">
+                <a href="https://github.com/SHALINISAURAV/AI-Study-Assistant" target="_blank">GitHub</a>
+                <a href="https://ai-study-assistant-fqe5mljcptjn7uvjzeeuap.streamlit.app" target="_blank">Live Demo</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>🎭 Multimodal Agent</h3>
+            <div class="gallery">
+                <img src="assets/multimodel-agent-1.png" alt="Multimodal Agent Frame">
+            </div>
+            <p>Multimodal AI application capable of understanding both images and text while generating intelligent responses through advanced AI reasoning.</p>
+            <div class="buttons">
+                <a href="https://github.com/SHALINISAURAV/Multimodel_Agent" target="_blank">GitHub</a>
+                <a href="https://multimodalagent-gxum3ml6xovzb5vdaeucr9.streamlit.app" target="_blank">Live Demo</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>📄 ResumeIQ AI</h3>
+            <div class="gallery">
+                <img src="assets/resumeiq-1.png" alt="ResumeIQ Analysis Overview">
+                <img src="assets/resumeiq-2.png" alt="ResumeIQ Evaluation Metrics">
+                <img src="assets/resumeiq-3.png" alt="ResumeIQ Skills Gap Graph">
+            </div>
+            <p>AI-powered Resume Analyzer that extracts resume insights, evaluates ATS compatibility, identifies skill gaps, and provides AI-powered job-match recommendations.</p>
+            <div class="buttons">
+                <a href="https://github.com/SHALINISAURAV/ResumeIQ-AI" target="_blank">GitHub</a>
+                <a href="https://resumeiq-ai-nssmnqpuwft6tcrjsiz6py.streamlit.app" target="_blank">Live Demo</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>📊 Multi-Model ML Visualizer</h3>
+            <div class="gallery">
+                <img src="assets/ml-visualizer-1.png" alt="ML Visualizer Dashboard">
+                <img src="assets/ml-visualizer-2.png" alt="ML Visualizer Training Control">
+                <img src="assets/ml-visualizer-3.png" alt="ML Visualizer Metrics Comparison">
+            </div>
+            <p>Interactive Machine Learning platform for uploading datasets, training multiple classification models, comparing performance metrics, and visualizing model evaluation results.</p>
+            <div class="buttons">
+                <a href="https://github.com/SHALINISAURAV/Multi_Model_ML_Visualizer" target="_blank">GitHub</a>
+                <a href="https://multimodelmlvisualizer-3xbjtvfke7tal9jqkvuymu.streamlit.app" target="_blank">Live Demo</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>🚀 AI Project Builder</h3>
+            <div class="gallery">
+                <img src="assets/ai-project-builder-1.png" alt="Project Generation Interface">
+                <img src="assets/ai-project-builder-2.png" alt="Architecture Graph Generation">
+                <img src="assets/ai-project-builder-3.png" alt="Roadmap Details View">
+            </div>
+            <p>AI-powered application that generates complete AI project ideas, architecture diagrams, development roadmaps, and implementation strategies.</p>
+            <div class="buttons">
+                <a href="https://github.com/SHALINISAURAV/AI-Project-Builder" target="_blank">GitHub</a>
+                <a href="https://ai-project-builder-9wgnsgdjpvq2gcwsvz7sr4.streamlit.app" target="_blank">Live Demo</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>🩺 Medical Insurance Regression</h3>
+            <div class="gallery">
+                <img src="assets/insurance-1.png" alt="Regression EDA Insights">
+                <img src="assets/insurance-2.png" alt="Model Prediction Platform">
+            </div>
+            <p>End-to-end Machine Learning regression application for predicting medical insurance expenses using EDA, feature engineering, Scikit-Learn Pipelines, and Streamlit deployment.</p>
+            <div class="buttons">
+                <a href="https://github.com/SHALINISAURAV/medical-insurance-regression" target="_blank">GitHub</a>
+                <a href="https://medical-insurance-regression-5hq3fvztnfcj79mehb5bc4.streamlit.app" target="_blank">Live Demo</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>📊 Student Performance Predictor</h3>
+            <div class="gallery">
+                <img src="assets/student-performance-1.png" alt="Performance Features Panel">
+            </div>
+            <p>Machine Learning application that predicts student academic performance using demographic and educational features.</p>
+            <div class="buttons">
+                <a href="https://github.com/SHALINISAURAV/student-performance-predictor" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>😊 Sentiment Analysis – Majhitar</h3>
+            <div class="gallery">
+                <img src="assets/sentiment-analysis-1.png" alt="Sentiment Analysis Accuracy Model">
+            </div>
+            <p>Restaurant review sentiment classification using TF-IDF, feature engineering, and Logistic Regression.</p>
+            <div class="buttons">
+                <a href="https://github.com/SHALINISAURAV/Sentiment-Analysis-Majhitar" target="_blank">GitHub</a>
+                <a href="https://sentiment-analysis-majhitar-rt6lcycxzndimdes9rwqca.streamlit.app" target="_blank">Live Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+    EXPERIENCE
+    =========================== -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>💼 Data Science Intern</h3>
+                    <h4>National Institute of Technology (NIT) Patna</h4>
+                    <p>Worked on Machine Learning and Data Science workflows, including data preprocessing, exploratory data analysis, feature engineering, predictive modeling, model evaluation, and documentation of AI solutions.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>💼 Junior Data Scientist</h3>
+                    <h4>BCG X – Data Science Job Simulation (Forage)</h4>
+                    <p>Performed customer churn analysis, exploratory data analysis, machine learning modeling, business insight generation, and presented data-driven recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+    CERTIFICATIONS
+    =========================== -->
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="cert-grid">
+            <div class="cert-card">OCI 2025 Generative AI Professional</div>
+            <div class="cert-card">IIT Guwahati Data Science Program</div>
+            <div class="cert-card">BCG X Data Science Job Simulation</div>
+            <div class="cert-card">Machine Learning</div>
+            <div class="cert-card">Deep Learning</div>
+            <div class="cert-card">Natural Language Processing</div>
+            <div class="cert-card">Generative AI</div>
+            <div class="cert-card">Recommendation Systems</div>
+            <div class="cert-card">Python for Data Science</div>
+            <div class="cert-card">SQL for Data Analytics</div>
+        </div>
+    </section>
+
+    <!-- ===========================
+    CONTACT
+    =========================== -->
+    <section id="contact">
+        <h2>Let's Connect</h2>
+        <p class="contact-text">
+            I'm actively looking for opportunities in Artificial Intelligence, Machine Learning, Generative AI, and Data Science. Feel free to reach out for internships, collaborations, or exciting AI projects.
+        </p>
+        <div class="contact-links">
+            <a href="mailto:shalinisourav07@gmail.com">📧 Email</a>
+            <a href="https://github.com/SHALINISAURAV" target="_blank">💻 GitHub</a>
+            <a href="https://www.linkedin.com/in/shalini-saurav-649aa22b8/" target="_blank">🔗 LinkedIn</a>
+        </div>
+    </section>
+
+    <!-- ===========================
+    FOOTER
+    =========================== -->
+    <footer>
+        <h3>Shalini Saurav</h3>
+        <p>Aspiring AI Engineer • Machine Learning • Generative AI • NLP • RAG • AI Agents</p>
+        <p>Designed & Developed with ❤️ using HTML, CSS & GitHub Pages</p>
+        <p>© 2026 Shalini Saurav. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Lightbox Functional Script -->
+    <script>
+        const images = document.querySelectorAll(".gallery img");
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+
+        images.forEach(image => {
+            image.onclick = () => {
+                lightbox.style.display = "flex";
+                lightboxImg.src = image.src;
+            }
+        });
+
+        lightbox.onclick = () => {
+            lightbox.style.display = "none";
+        };
+    </script>
 </body>
-
 </html>
